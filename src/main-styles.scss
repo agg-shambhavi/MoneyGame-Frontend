@@ -8,7 +8,7 @@ $vlight-purple : #ebebff;
 $grad-purple : #6666FF;
 $light-grey : #F5F5F5;
 $white : #FFFFFF;
-$red : #FFFFFF;
+$red : #FF0000;
 $green : #63FC63;
 $black : #333333;
 
@@ -18,10 +18,10 @@ $primary : $dark-purple;
 $text: $black;
 $link : $dark-purple;
 
-// Update some of Bulma's component variables
-$control-border-width : 2px;
-$input-border-color: transparent;
-$input-shadow : none;
+// // Update some of Bulma's component variables
+// $control-border-width : 2px;
+// $input-border-color: transparent;
+// $input-shadow : none;
 
 // set custom global styles(will be applied to whole app)
 html, body{
