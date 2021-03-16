@@ -35,23 +35,24 @@
         color: white;
         padding:15px;
         border-top-left-radius: 8px;
+        font-weight:bold;
+        letter-spacing: 1px;
+        justify-content: center;
         
     }
     
 }
 
 
-
-
-
 .main-content-container{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    width: 80%;
     background: $white;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
     padding: 30px;
+    overflow-y: scroll;
 }
 
 .list-menu{
@@ -77,9 +78,19 @@
 }
 
 .logout-btn{
-    border-color: $dark-purple;
+
     margin: 20px;
-    color: $dark-purple;
+    
+}
+
+.btn-outline-primary{
+    background-color: $white ;
+    
+}
+
+.btn-outline-primary:hover{
+    background-color: $dark-purple !important;
+    
 }
 
 

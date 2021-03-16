@@ -13,7 +13,7 @@ $green : #63FC63;
 $black : #333333;
 
 // Update Bulmaás global variables
-$family-sans-serif : "Raleway", sans-serif;
+$font-family-sans-serif : "Raleway", sans-serif;
 $primary : $dark-purple;
 $text: $black;
 $link : $dark-purple;
@@ -24,10 +24,8 @@ $input-border-color: transparent;
 $input-shadow : none;
 
 // set custom global styles(will be applied to whole app)
-html{
-    background: linear-gradient(to right top, $light-purple, $grad-purple);
-}
-
 html, body{
+    background: linear-gradient(to right top, $light-purple, $grad-purple);
     height: 100%
 }
+
