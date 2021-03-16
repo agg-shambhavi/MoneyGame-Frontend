@@ -1,45 +1,145 @@
-.navbar-brand{
-    color: white;
-    padding: 5px;
-}
-.navbar{
-    background-color: rgb(102,102,255);
+@import '../../../main-styles.scss';
+.landing-page{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  line-height: 1.5rem;
 }
 
-.jumbotron {
-  position: relative;
-  overflow: hidden;
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background-color: white;
-  
-  .container {
-    position: relative;
-    z-index: 2;
-    color: #212121;
-  }
-  &-title {
-    text-transform: uppercase;
-    
-  }
-  &-description {
-    font-size: 12px;
-    word-spacing: 2px;
-    font-weight: 500;
-  }
-  
+.head{
+  width: 100%;
+  height: 100vh;
+ 
 }
-.hero-image-container {
-  height: 500px;
-  width: 500px;
-  display: inline-flex;
-  justify-content: center;
+
+nav{
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  border-radius: 500px;
-
-  img {
-    max-height: 100%;
-
-    z-index: 3;
-  }
+  padding: 20px 70px;
+  font-size: 18px;
+  color: $dark-purple;
+  width: 100%;
 }
+
+.navbrand{
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.navbrand fa-icon{
+  padding: 10px;
+}
+
+.nav-items{
+  margin-left: auto;
+}
+
+.nav-items ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  font-weight: bold;
+}
+
+.nav-items ul li a{
+  text-decoration: none;
+  padding: 5px;
+
+}
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #333232;
+  height: 1px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+.headpage{
+  width: 100%;
+  height: 85vh;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  align-items: center;
+}
+
+.text{
+  padding-left: 50px;
+  line-height: 2rem;
+  color: #333232;
+  align-items: center;
+}
+
+.text h4{
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.text h1{
+  font-weight: bolder;
+  font-size: 40px;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  line-height: 3rem;
+}
+
+.text p{
+  font-weight: 500;
+  font-size: 200;
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.illustration img{
+  width: 100%;
+}
+
+.footer {
+
+	color: #333232;
+	padding: 30px;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	text-align: center;
+  margin-top: 20px;
+}
+
