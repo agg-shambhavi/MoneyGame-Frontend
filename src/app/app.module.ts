@@ -7,12 +7,20 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PortfolioComponent } from "./pages/portfolio/portfolio.component";
+import { AllTransactionsComponent } from './pages/all-transactions/all-transactions.component';
+import { BuyPageComponent } from './pages/buy-page/buy-page.component';
+import { UserInfoComponent } from './pages/user-info/user-info.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    AllTransactionsComponent,
+    BuyPageComponent,
+    UserInfoComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,

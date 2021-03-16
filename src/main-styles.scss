@@ -19,13 +19,15 @@ $text: $black;
 $link : $dark-purple;
 
 // // Update some of Bulma's component variables
-// $control-border-width : 2px;
+$control-border-width : 2px;
 // $input-border-color: transparent;
 // $input-shadow : none;
 
-// set custom global styles(will be applied to whole app)
-html, body{
-    background: linear-gradient(to right top, $light-purple, $grad-purple);
-    height: 100%
-}
 
+// set custom global styles(will be applied to whole app)
+
+html, body{
+    // background: linear-gradient(to right top, $light-purple, $grad-purple);
+    height: 100%;
+    
+}

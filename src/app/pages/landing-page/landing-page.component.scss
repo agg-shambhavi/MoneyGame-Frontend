@@ -1,0 +1,45 @@
+.navbar-brand{
+    color: white;
+    padding: 5px;
+}
+.navbar{
+    background-color: rgb(102,102,255);
+}
+
+.jumbotron {
+  position: relative;
+  overflow: hidden;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: white;
+  
+  .container {
+    position: relative;
+    z-index: 2;
+    color: #212121;
+  }
+  &-title {
+    text-transform: uppercase;
+    
+  }
+  &-description {
+    font-size: 12px;
+    word-spacing: 2px;
+    font-weight: 500;
+  }
+  
+}
+.hero-image-container {
+  height: 500px;
+  width: 500px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 500px;
+
+  img {
+    max-height: 100%;
+
+    z-index: 3;
+  }
+}

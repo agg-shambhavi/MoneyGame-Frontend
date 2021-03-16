@@ -7,19 +7,19 @@
                     MoneyGame</span>
             </div>
                 <div class="list-menu">
-                    <a class="list-menu-items is-active"> 
+                    <a class="list-menu-items " [routerLink]="['/portfolio']" routerLinkActive="active" > 
                         <p>Portfolio</p>
                     </a>
-                    <a class="list-menu-items"> 
+                    <a class="list-menu-items" [routerLink]="['/all-transactions']" routerLinkActive="active" > 
                         <p>All transactions</p>
                     </a>
-                    <a class="list-menu-items"> 
+                    <a class="list-menu-items" [routerLink]="['/buy']" routerLinkActive="active"> 
                         <p>Buy</p>
                     </a>
                     <a class="list-menu-items"> 
                         <p>Sell</p>
                     </a>
-                    <a class="list-menu-items"> 
+                    <a class="list-menu-items" [routerLink]="['/userinfo']" routerLinkActive="active"> 
                         <p>User Info</p>
                     </a>
                 </div>
@@ -28,7 +28,9 @@
         </div>
         <div class="main-content-container">
             
-            <app-portfolio></app-portfolio>
+            <!-- <app-portfolio></app-portfolio>
+            <app-all-transactions></app-all-transactions> -->
+            <router-outlet></router-outlet>
             
         </div>
     </div>

@@ -6,6 +6,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    background: linear-gradient(to right top, $light-purple, $grad-purple);
 }
 
 .dashboard-container{
@@ -68,7 +69,7 @@
         &:hover{
             background: $light-purple;
         }
-        &.is-active{
+        &.active{
             border-right-style: solid;
             border-color: $dark-purple;
             border-width: 3px;
