@@ -11,6 +11,8 @@ import { AllTransactionsComponent } from './pages/all-transactions/all-transacti
 import { BuyPageComponent } from './pages/buy-page/buy-page.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
+import { LoginComponent } from './pages/login/login.component';
+import { SignupComponent } from './pages/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
     AllTransactionsComponent,
     BuyPageComponent,
     UserInfoComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    LoginComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
