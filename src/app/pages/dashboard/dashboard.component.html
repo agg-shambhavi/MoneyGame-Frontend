@@ -8,22 +8,42 @@
             </div>
                 <div class="list-menu">
                     <a class="list-menu-items " [routerLink]="['/portfolio']" routerLinkActive="active" > 
-                        <p>Portfolio</p>
+                        <span>
+                            <fa-icon [icon]="faThList"></fa-icon>
+                            Portfolio
+                        </span>
                     </a>
                     <a class="list-menu-items" [routerLink]="['/all-transactions']" routerLinkActive="active" > 
-                        <p>All transactions</p>
+                        <span>
+                            <fa-icon [icon]="faShoppingCart"></fa-icon>
+                            All transactions
+                        </span>
                     </a>
                     <a class="list-menu-items" [routerLink]="['/buy']" routerLinkActive="active"> 
-                        <p>Buy</p>
+                        <span>
+                            <fa-icon [icon]="faShoppingBag"></fa-icon>
+                            Buy 
+                        </span>
                     </a>
                     <a class="list-menu-items"> 
-                        <p>Sell</p>
+                        <span>
+                            <fa-icon [icon]="faHandHoldingUsd"></fa-icon>
+                            Sell 
+                        </span>
                     </a>
                     <a class="list-menu-items" [routerLink]="['/userinfo']" routerLinkActive="active"> 
-                        <p>User Info</p>
+                        <span>
+                            <fa-icon [icon]="faUser"></fa-icon>
+                            User Info 
+                        </span>
                     </a>
                 </div>
-                <button class="btn-outline-primary logout-btn">Logout</button>
+                <button class="btn-primary logout-btn">
+                    <span>
+                        <fa-icon [icon]="faSignOutAlt"></fa-icon>
+                        Logout 
+                    </span>
+                </button>
             
         </div>
         <div class="main-content-container">

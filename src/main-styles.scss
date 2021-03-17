@@ -2,27 +2,60 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
 
+
 $dark-purple : #6666FF;
 $light-purple : #CCCCFF;
 $vlight-purple : #ebebff;
 $grad-purple : #6666FF;
 $light-grey : #F5F5F5;
 $white : #FFFFFF;
-$red : #FF0000;
-$green : #63FC63;
-$black : #333333;
+$red : #F7B2AD;
+$green : #F7B2AD;
+$black : #333232;
 
 // Update Bulmaás global variables
 $font-family-sans-serif : "Raleway", sans-serif;
 $primary : $dark-purple;
 $text: $black;
-$link : $dark-purple;
+// $link : $dark-purple;
 
 // // Update some of Bulma's component variables
 $control-border-width : 2px;
 // $input-border-color: transparent;
 // $input-shadow : none;
 
+.card{
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.form-group input{
+    height: auto;
+    border-radius: 2rem;
+  }
+
+.form-group>input,
+.form-group>label, label {
+    --input-padding-x: 0.5rem;
+    --input-padding-y: .5rem;
+    padding: var(--input-padding-y) var(--input-padding-x);
+    color: $black;
+}
+
+.form-group>input {
+    --input-padding-x: 1.5rem;
+    --input-padding-y: .75rem;
+    padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+button, .btn, .btn-primary, .btn-outline-primary {
+    border-radius: 4rem;
+    padding: 0.5rem 2rem;
+    letter-spacing: .1rem;
+}
+.btn-outline-primary{
+    background-color: $white;
+}
 
 // set custom global styles(will be applied to whole app)
 
