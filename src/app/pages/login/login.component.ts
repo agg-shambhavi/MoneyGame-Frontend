@@ -9,6 +9,11 @@ export class LoginComponent implements OnInit {
 
   constructor() { }
 
+  model = {
+    email : '',
+    password : ''
+  };
+
   ngOnInit(): void {
   }
 

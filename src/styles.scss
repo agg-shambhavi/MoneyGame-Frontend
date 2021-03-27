@@ -7,3 +7,14 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import '~@angular/material/theming';
+$custom-typography: mat-typography-config(
+  $font-family: 'Raleway'
+);
+
+@include angular-material-typography($custom-typography);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+
+html, body { height: 100%;
+    font-family: 'Raleway' !important }
+body { margin: 0;  }

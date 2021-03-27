@@ -5,26 +5,90 @@
             <div class="card card-signin my-5">
             <div class="card-body">
                 <h5 class="card-title text-center">Sign Up</h5>
-                <form class="form-signin">
+                <form class="form-signin" #signUpForm="ngForm" (ngSubmit)= "signUpForm.valid && onSubmit(signUpForm)">
                 <div class="form-label-group">
                     <label for="inputfn">First Name</label>
-                    <input id="inputfn" class="form-control"  required autofocus>
+                    <input 
+                    id="inputfn"
+                    class="form-control"  
+                    required 
+                    autofocus
+                    type="text" 
+                    #first_name="ngModel" 
+                    [(ngModel)]="userService.selectedUser.first_name" 
+                    name="first_name" 
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !first_name.valid }"
+                    >
+                    <div *ngIf="signUpForm.submitted &#038;&#038; !first_name.valid">
+                        <label class="validation-message">This field is required.</label>
+                    </div>
                 </div>
 
                 <div class="form-label-group">
                     <label for="inputln">Last Name</label>
-                    <input  id="inputln" class="form-control"  required autofocus>
+                    <input  
+                    id="inputln" 
+                    class="form-control"  
+                    required 
+                    autofocus
+                    type="text" 
+                    #last_name="ngModel" 
+                    [(ngModel)]="userService.selectedUser.last_name" 
+                    name="last_name"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !last_name.valid }"
+                    >
+                    <div *ngIf="signUpForm.submitted &#038;&#038; !last_name.valid">
+                        <label class="validation-message">This field is required.</label>
+                    </div>
                 </div>
                 <div class="form-label-group">
                     <label for="inputEmail">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <input 
+                    type="email" 
+                    id="inputEmail" 
+                    class="form-control" 
+                    required 
+                    autofocus
+                    type="text" 
+                    #user_email="ngModel" 
+                    [(ngModel)]="userService.selectedUser.user_email" 
+                    name="email"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !user_email.valid }"
+                    [pattern]="emailRegex"
+                    >
+                    <div *ngIf="signUpForm.submitted &#038;&#038; user_email.errors">
+                        <label *ngIf="user_email.errors.required" class="validation-message">This field is required.</label>
+                        <label *ngIf="user_email.errors.pattern" class="validation-message">Invalid email address.</label>
+                    </div>
                 </div>
 
                 <div class="form-label-group">
                     <label for="inputPassword">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                    <input 
+                    type="password" 
+                    id="inputPassword" 
+                    class="form-control" 
+                    required
+                    #password="ngModel" 
+                    [(ngModel)]="userService.selectedUser.user_password" 
+                    name="password"
+                    minlength="4" 
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !password.valid }"
+                    >
+                    <div *ngIf="signUpForm.submitted &#038;&#038; password.errors">
+                        <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+                        <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+                    </div>
                 </div>
-                <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Sign Up</button>
+                <button 
+                class="btn btn-lg btn-primary btn-block text-uppercase" 
+                type="submit">
+                    Sign Up
+                </button>
+                <!-- Error message -->
+                <div class="alert" *ngIf="serverErrorMessages">
+                    {{serverErrorMessages}}
+                </div>
                 </form>
             </div>
             </div>

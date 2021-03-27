@@ -56,7 +56,6 @@ button, .btn, .btn-primary, .btn-outline-primary {
 .btn-outline-primary{
     background-color: $white;
 }
-
 // set custom global styles(will be applied to whole app)
 
 html, body{
@@ -64,3 +63,11 @@ html, body{
     height: 100%;
     
 }
+
+input[type=text].invalid-textbox,input[type=password].invalid-textbox{
+    border: 1px solid $red;
+}
+
+label.validation-message{
+    color:$red;
+  }

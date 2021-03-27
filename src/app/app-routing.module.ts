@@ -12,6 +12,7 @@ import { UserInfoComponent } from './pages/user-info/user-info.component';
 const routes: Routes = [
   {path: '', component: DashboardComponent, children: [
     {path: 'portfolio', component: PortfolioComponent},
+    {path: '', component: PortfolioComponent},
     {path: 'all-transactions', component: AllTransactionsComponent},
     {path: 'buy', component: BuyPageComponent},
     {path: 'userinfo', component: UserInfoComponent}

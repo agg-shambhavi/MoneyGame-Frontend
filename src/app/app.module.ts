@@ -1,11 +1,19 @@
+// built-in 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+// packages imports - related to bootstrap and material
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MatTableModule } from '@angular/material/table';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+// Components
+import { AppComponent } from './app.component';
+import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { PortfolioComponent } from "./pages/portfolio/portfolio.component";
 import { AllTransactionsComponent } from './pages/all-transactions/all-transactions.component';
 import { BuyPageComponent } from './pages/buy-page/buy-page.component';
@@ -13,6 +21,7 @@ import { UserInfoComponent } from './pages/user-info/user-info.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
+
 
 @NgModule({
   declarations: [
@@ -31,7 +40,10 @@ import { SignupComponent } from './pages/signup/signup.component';
     AppRoutingModule,
     FontAwesomeModule,
     NgbModule,
-
+    BrowserAnimationsModule,
+    MatTableModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
