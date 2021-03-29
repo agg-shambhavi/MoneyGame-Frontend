@@ -14,7 +14,7 @@ const routes: Routes = [
 
 
 {path: 'landing', component: LandingPageComponent},
-// {path: '',  redirectTo: '/landing', pathMatch: 'full' },
+{path: '',  redirectTo: '/landing', pathMatch: 'full' },
 {path: 'login', component: LoginComponent},
 {path: 'signup', component: SignupComponent},
   {path: 'dashboard', component: DashboardComponent, canActivate : [AuthGuard] ,children: [

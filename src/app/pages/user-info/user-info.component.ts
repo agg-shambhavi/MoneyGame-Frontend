@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { UserService } from 'src/app/User/user.service';
 
 @Component({
   selector: 'app-user-info',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserInfoComponent implements OnInit {
 
-  constructor() { }
+  userDetails;
+
+  constructor(public userService : UserService, private router: Router) { }
 
   ngOnInit(): void {
+    this.userService.getUserProfile().subscribe(
+      res => {
+        this.userDetails = res;
+        console.log(this.userDetails);
+      },
+      err => {}
+    );
   }
 
 }

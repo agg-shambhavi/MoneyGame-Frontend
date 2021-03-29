@@ -1,12 +1,12 @@
 <div class="col-md-8">
-    <div class="card mb-3">
+    <div class="card mb-3" >
       <div class="card-body">
         <div class="row">
           <div class="col-sm-3">
             <h6 class="mb-0">First Name</h6>
           </div>
           <div class="col-sm-9 text-secondary">
-            John
+            {{userDetails.first_name}}
           </div>
         </div>
         <hr>
@@ -15,7 +15,7 @@
             <h6 class="mb-0">Last Name</h6>
           </div>
           <div class="col-sm-9 text-secondary">
-            Doe
+            {{userDetails.last_name}}
           </div>
         </div>
         <hr>
@@ -24,7 +24,7 @@
             <h6 class="mb-0">Email</h6>
           </div>
           <div class="col-sm-9 text-secondary">
-            jdoe@xyz.com
+            {{userDetails.user_email}}
           </div>
         </div>
         <hr>
@@ -33,7 +33,7 @@
             <h6 class="mb-0">Registration Date</h6>
           </div>
           <div class="col-sm-9 text-secondary">
-            xx/xx/20xx
+            {{userDetails.registration_date | date}}
           </div>
         </div>
       </div>
