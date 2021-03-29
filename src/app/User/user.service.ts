@@ -35,6 +35,10 @@ export class UserService {
     return this.http.get(environment.apiBaseUrl + '/dashboard/userinfo')
   }
 
+  getUserTransactions(){
+    return this.http.get(environment.apiBaseUrl + '/transaction/all');
+  }
+
   // Helper methods
 
   isLoggedIn(){

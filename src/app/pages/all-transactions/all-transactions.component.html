@@ -1,30 +1,39 @@
 <div class="card">
-<table class="table table-striped card-body">
-    <thead>
-    <tr>
-      <th scope="col">Stock Symbol</th>
-      <th scope="col">Transaction Type</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Price</th>
-      <th scope="col">Date</th>
-    </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td scope="col">Stock 1</td>
-            <td scope="col">Buy</td>
-            <td scope="col">4</td>
-            <td scope="col">30</td>
-            <td scope="col">xx/xx/20xx</td>
-        </tr>
-        <tr>
-            <td scope="col">Stock 2</td>
-            <td scope="col">Sell</td>
-            <td scope="col">4</td>
-            <td scope="col">30</td>
-            <td scope="col">xx/xx/20xx</td>
-        </tr>
 
-    </tbody>
+<table mat-table  [dataSource] = "ELEMENT_DATA">
+
+  <ng-container matColumnDef = "Stock Symbol">
+    <th mat-header-cell *matHeaderCellDef> Stock Symbol</th>
+    <td mat-cell *matCellDef = "let element"> {{element.stock_symbol}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef = "Stock Name">
+    <th mat-header-cell *matHeaderCellDef> Stock Name</th>
+    <td mat-cell *matCellDef = "let element"> {{element.stock_name}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef = "Transaction Type">
+    <th mat-header-cell *matHeaderCellDef> Transaction Type</th>
+    <td mat-cell *matCellDef = "let element"> {{element.transaction_type}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef = "Quantity">
+    <th mat-header-cell *matHeaderCellDef> Quantity</th>
+    <td mat-cell *matCellDef = "let element"> {{element.abs}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef = "Transaction Price">
+    <th mat-header-cell *matHeaderCellDef> Transaction Price</th>
+    <td mat-cell *matCellDef = "let element"> {{element.eod_price | currency:"INR":"symbol"}}</td>
+  </ng-container>
+
+  <ng-container matColumnDef = "Transaction Date">
+    <th mat-header-cell *matHeaderCellDef> Transaction Date</th>
+    <td mat-cell *matCellDef = "let element"> {{element.transaction_date | date : 'short'}}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
 </table>
 </div>
