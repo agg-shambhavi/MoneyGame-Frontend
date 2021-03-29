@@ -17,9 +17,9 @@
                     #first_name="ngModel" 
                     [(ngModel)]="userService.selectedUser.first_name" 
                     name="first_name" 
-                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !first_name.valid }"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted && !first_name.valid }"
                     >
-                    <div *ngIf="signUpForm.submitted &#038;&#038; !first_name.valid">
+                    <div *ngIf="signUpForm.submitted && !first_name.valid">
                         <label class="validation-message">This field is required.</label>
                     </div>
                 </div>
@@ -35,9 +35,9 @@
                     #last_name="ngModel" 
                     [(ngModel)]="userService.selectedUser.last_name" 
                     name="last_name"
-                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !last_name.valid }"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted && !last_name.valid }"
                     >
-                    <div *ngIf="signUpForm.submitted &#038;&#038; !last_name.valid">
+                    <div *ngIf="signUpForm.submitted && !last_name.valid">
                         <label class="validation-message">This field is required.</label>
                     </div>
                 </div>
@@ -48,15 +48,14 @@
                     id="inputEmail" 
                     class="form-control" 
                     required 
-                    autofocus
-                    type="text" 
+                    autofocus 
                     #user_email="ngModel" 
                     [(ngModel)]="userService.selectedUser.user_email" 
                     name="email"
-                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !user_email.valid }"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted && !user_email.valid }"
                     [pattern]="emailRegex"
                     >
-                    <div *ngIf="signUpForm.submitted &#038;&#038; user_email.errors">
+                    <div *ngIf="signUpForm.submitted && user_email.errors">
                         <label *ngIf="user_email.errors.required" class="validation-message">This field is required.</label>
                         <label *ngIf="user_email.errors.pattern" class="validation-message">Invalid email address.</label>
                     </div>
@@ -73,9 +72,9 @@
                     [(ngModel)]="userService.selectedUser.user_password" 
                     name="password"
                     minlength="4" 
-                    [ngClass]="{'invalid-textbox' :signUpForm.submitted &#038;&#038; !password.valid }"
+                    [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }"
                     >
-                    <div *ngIf="signUpForm.submitted &#038;&#038; password.errors">
+                    <div *ngIf="signUpForm.submitted && password.errors">
                         <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
                         <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
                     </div>

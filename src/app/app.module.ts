@@ -22,6 +22,10 @@ import { LandingPageComponent } from './pages/landing-page/landing-page.componen
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 
+// Services and auth gaurd
+import { UserService } from './User/user.service';
+import { AuthGuard } from './auth/auth.guard';
+
 
 @NgModule({
   declarations: [
@@ -45,7 +49,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
