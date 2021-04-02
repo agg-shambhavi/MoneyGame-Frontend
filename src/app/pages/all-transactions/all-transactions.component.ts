@@ -21,7 +21,7 @@ export interface allTransactions{
 export class AllTransactionsComponent implements OnInit {
 
   allTransactionDetails ;
-  ELEMENT_DATA : allTransactions[] = [];
+  DATA : allTransactions[] = [];
 
   constructor(public userService : UserService, private router: Router) { }
 
@@ -29,7 +29,7 @@ export class AllTransactionsComponent implements OnInit {
     this.userService.getUserTransactions().subscribe(
       res => {
         this.allTransactionDetails = res;
-        this.ELEMENT_DATA  = this.allTransactionDetails;
+        this.DATA  = this.allTransactionDetails;
         console.log(this.allTransactionDetails);
       },
       err => {}

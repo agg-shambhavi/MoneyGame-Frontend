@@ -39,6 +39,10 @@ export class UserService {
     return this.http.get(environment.apiBaseUrl + '/transaction/all');
   }
 
+  getUserPortfolio(){
+    return this.http.get(environment.apiBaseUrl + '/dashboard/portfolio');
+  }
+
   // Helper methods
 
   isLoggedIn(){
