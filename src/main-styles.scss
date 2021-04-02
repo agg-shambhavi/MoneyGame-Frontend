@@ -1,7 +1,6 @@
 // This is where we put global styles and change variable values
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 
@@ -79,4 +78,8 @@ label.validation-message{
     letter-spacing: 1px;
     font-size: 20px;
     text-transform: uppercase;
+}
+
+.highlight-color{
+    color : $dark-purple;
 }
