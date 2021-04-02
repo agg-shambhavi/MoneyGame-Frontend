@@ -1,15 +1,17 @@
 // This is where we put global styles and change variable values
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 
-$dark-purple : #6666FF;
-$light-purple : #CCCCFF;
-$vlight-purple : #ebebff;
-$grad-purple : #6666FF;
+$dark-purple : #0C516E;
+$light-purple : #F7F9FB;
+$grad1 : #0C516E;
+$grad2 : #1279A5;
 $light-grey : #F5F5F5;
 $white : #FFFFFF;
-$red : #F7B2AD;
+$red : #E81224;
 $green : #F7B2AD;
 $black : #333232;
 
@@ -70,4 +72,11 @@ input[type=text].invalid-textbox,input[type=password].invalid-textbox{
 
 label.validation-message{
     color:$red;
-  }
+}
+
+.company-title{
+    font-family: "Dela Gothic One";
+    letter-spacing: 1px;
+    font-size: 20px;
+    text-transform: uppercase;
+}

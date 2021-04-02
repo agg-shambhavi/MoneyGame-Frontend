@@ -43,6 +43,10 @@ export class UserService {
     return this.http.get(environment.apiBaseUrl + '/dashboard/portfolio');
   }
 
+  getStockPrice(stockSymbolDate : stockPriceInterface){
+    return this.http.get(environment.apiBaseUrl + '/util/stock_price', this.noAuthHeader);
+  }
+
   // Helper methods
 
   isLoggedIn(){
@@ -66,6 +70,9 @@ export class UserService {
     localStorage.removeItem('token');
   }
 
-  
+}
 
+export interface stockPriceInterface {
+  stock_symbol : string,
+  date : Date
 }
