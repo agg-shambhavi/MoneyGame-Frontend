@@ -43,8 +43,12 @@ export class UserService {
     return this.http.get(environment.apiBaseUrl + '/dashboard/portfolio');
   }
 
-  getStockPrice(stockSymbolDate : stockPriceInterface){
-    return this.http.get(environment.apiBaseUrl + '/util/stock_price', this.noAuthHeader);
+  postStockPrice(stockSymbolDate : stockPriceClass){
+    return this.http.post(environment.apiBaseUrl + '/util/stock_price',stockSymbolDate, this.noAuthHeader);
+  }
+
+  postbuy(buyDetails : transactionClass){
+    return this.http.post(environment.apiBaseUrl + '/transaction/buy',buyDetails)
   }
 
   // Helper methods
@@ -72,7 +76,19 @@ export class UserService {
 
 }
 
-export interface stockPriceInterface {
-  stock_symbol : string,
-  date : Date
+export class stockPriceClass {
+  constructor(
+    public stock_symbol : string,
+    public date : string,
+
+  ) {  }
+}
+
+export class transactionClass {
+  constructor(
+    public stock_symbol : string,
+    public date : string,
+    public qty : number,
+  ) {  }
+  
 }
