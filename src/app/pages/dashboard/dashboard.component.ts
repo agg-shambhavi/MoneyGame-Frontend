@@ -24,7 +24,7 @@ export class DashboardComponent implements OnInit {
 
   onLogout(){
     this.userService.deleteToken();
-    this.router.navigateByUrl('/login');
+    this.router.navigateByUrl('/landing');
   }
 
   fachart = faChartLine;
