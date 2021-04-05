@@ -48,7 +48,15 @@ export class UserService {
   }
 
   postbuy(buyDetails : transactionClass){
-    return this.http.post(environment.apiBaseUrl + '/transaction/buy',buyDetails)
+    return this.http.post(environment.apiBaseUrl + '/transaction/buy', buyDetails)
+  }
+
+  getSellStocks(){
+    return this.http.get(environment.apiBaseUrl + '/dashboard/sell-stocks');
+  }
+
+  postsell(sellDetails : transactionClass){
+    return this.http.post(environment.apiBaseUrl + '/transaction/sell', sellDetails)
   }
 
   // Helper methods

@@ -16,12 +16,12 @@
     </div>
     <div class="form-group">
         <label for="currPrice">Current Price</label>
-        <input  class="form-control" id="currPrice" value = {{current_price}}  disabled>
+        <input  class="form-control" id="currPrice" placeholder="Current Price" value = "{{current_price | currency:'INR':'symbol'}}"  disabled>
       </div>
 
       <div class="form-group">
         <label for="totalAmount">Total Amount</label>
-        <input  class="form-control" id="totalAmounte" placeholder="300" disabled value = "{{current_price * model.qty}}">
+        <input  class="form-control" id="totalAmount" placeholder="Total Amount" disabled value = "{{current_price * model.qty | currency:'INR':'symbol'}}">
       </div>
     
     <button type="submit" class=" btn-primary">Submit</button>

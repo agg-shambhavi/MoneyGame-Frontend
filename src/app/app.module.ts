@@ -27,6 +27,7 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { UserService } from './User/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { AuthInterceptor } from './auth/auth.interceptor';
+import { SellPageComponent } from './pages/sell-page/sell-page.component';
 
 
 
@@ -40,7 +41,8 @@ import { AuthInterceptor } from './auth/auth.interceptor';
     UserInfoComponent,
     LandingPageComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    SellPageComponent
   ],
   imports: [
     BrowserModule,

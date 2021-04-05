@@ -1,0 +1,32 @@
+<div class="col-md-8 card">
+    <form class= "card-body" #sellform="ngForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="stockSymbol">Enter Stock Symbol</label>
+          <input id="typeahead-basic" name="stockSymbol" type="text" class="form-control"  [ngbTypeahead]="search"
+          (focus)="focus$.next($any($event).target.value)"
+          (click)="click$.next($any($event).target.value)"
+          #instance="ngbTypeahead" [(ngModel)]="model.stock_symbol" (focusout)="updatePrice()" />
+          <!-- <input id="typeahead-prevent-manual-entry"  type="text" class="form-control"
+          [(ngModel)]="stock_symbol"
+          [ngbTypeahead]="search"
+          
+          [editable]='false' /> -->
+        
+        </div>
+        <div class="form-group">
+          <label for="quantity">Enter Quantity</label>
+          <input  class="form-control" id="quantity" placeholder="Enter Quantity" name="qty" [(ngModel)]="model.qty">
+        </div>
+        <div class="form-group">
+            <label for="currPrice">Current Price</label>
+            <input  class="form-control" id="currPrice" placeholder="Current Price" value = "{{current_price| currency:'INR':'symbol'}}"  disabled>
+          </div>
+    
+          <div class="form-group">
+            <label for="totalAmount">Total Amount</label>
+            <input  class="form-control" id="totalAmount" placeholder="Total Amount" disabled value = "{{current_price * model.qty | currency:'INR':'symbol'}}">
+          </div>
+        
+        <button type="submit" class=" btn-primary">Submit</button>
+    </form>
+    </div>

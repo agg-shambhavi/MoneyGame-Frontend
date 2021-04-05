@@ -7,6 +7,7 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 import { LoginComponent } from './pages/login/login.component';
 import { PortfolioComponent } from "./pages/portfolio/portfolio.component"
+import { SellPageComponent } from './pages/sell-page/sell-page.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserInfoComponent } from './pages/user-info/user-info.component';
 
@@ -22,6 +23,7 @@ const routes: Routes = [
     {path: 'portfolio', component: PortfolioComponent},
     {path: 'all-transactions', component: AllTransactionsComponent},
     {path: 'buy', component: BuyPageComponent},
+    {path: 'sell', component: SellPageComponent},
     {path: 'userinfo', component: UserInfoComponent}
   ],
   },
