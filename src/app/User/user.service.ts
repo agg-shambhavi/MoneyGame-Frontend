@@ -21,7 +21,7 @@ export class UserService {
 
   }
 
-  // http method
+  // http methods
 
   postUser(user_info: User){
     return this.http.post(environment.apiBaseUrl + '/auth/register',user_info, this.noAuthHeader)
