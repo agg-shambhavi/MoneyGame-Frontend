@@ -1,5 +1,5 @@
 # 📈💰MoneyGame - Frontend 
-![Socialify](https://socialify.git.ci/agg-shambhavi/MoneyGame-Frontend/image?font=Raleway&language=1&owner=1&pattern=Circuit%20Board&theme=Light)
+![Socialify](https://socialify.git.ci/agg-shambhavi/MoneyGame-Frontend/image?description=1&descriptionEditable=Learn%20investment%20in%20the%20stock%20market%20without%20risks.%20%F0%9F%8E%89&font=Raleway&language=1&owner=1&pattern=Circuit%20Board&theme=Light)
 
 ## 🙋 Introduction
 Investing in the share market allows you to earn potentially higher returns on your investment. But people fear entering the stock market due to the risk associated with it.😨 Hence, a lot of people do not invest in the stock market at all.
