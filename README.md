@@ -6,9 +6,9 @@ Investing in the share market allows you to earn potentially higher returns on y
 
 <b> MoneyGame</b> a platform where people can learn to invest in the stock market without the fear of losing their money. They will be able to experiment by buying and selling real stocks but not with real money. Once they have a good understanding of the stock market, they can confidently move to the real stock market. 😄
 
-## Development server
+## 💻 Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. ➡️ Navigate to `http://localhost:4200/`. 
 
 ## 📷 How does webapp looks like
 |   ![LANDING PAGE](https://user-images.githubusercontent.com/48705124/129231956-0b5ffa48-380c-458d-b472-869efc3e149e.png)| ![signin](https://user-images.githubusercontent.com/48705124/129232187-e01c389e-c648-4704-a5d4-083fc7d727ff.png)  |
@@ -20,3 +20,6 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 |  Buy Page | Sell Page  |
 |  ![image](https://user-images.githubusercontent.com/48705124/129234210-27f06d69-b485-4a81-8ac9-0bdf29611644.png)|![signup](https://user-images.githubusercontent.com/48705124/129234389-5259528b-e60f-4ac6-ac66-bc6eb32f4c8a.png)|
 | User Info Page  | Sign up Page  |
+
+## 📜 License
+This project is released under a free and open-source software license, Apache License 2.0 or later ([LICENSE](LICENSE) or https://www.apache.org/licenses/LICENSE-2.0). The documentation is also released under a free documentation license, namely the [GFDL v1.3](https://www.gnu.org/licenses/fdl-1.3.en.html) license or later.
